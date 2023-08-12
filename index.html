@@ -1,0 +1,239 @@
+<html> 
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Stop Violence</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head> 
+
+    <body>
+    <header>
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Campaign Stop Violence</h1>
+          <p>Kesadaran dan Menghindari Perilaku Kekerasan</p>
+        </div>  
+        <nav>
+          <ul>
+            <li><a href="#article">Perilaku Kekerasan</a></li>
+            <li><a href="#Survey Korban Kekerasan">Survey Korban Kekerasan</a></li>
+            <li><a href="#History Cerita Korban Kekerasan">History Cerita Korban Kekerasan</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+    <article>
+    <div class="container" id="article">
+    <div class="article" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)" onclick="handleClick('bullying.html')">
+      <h2>Bullying</h2>
+      <img src="assets/img/bullying.png" alt="Bullying" class="image">
+      <p>Penindasan verbal atau fisik yang dilakukan terhadap orang lain</p>  
+    </div>
+    </article>
+    <div class="container" id="article">
+    <div  class="article" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)" onclick="handleClick('kekerasan-seksual.html')">
+      <h2>Kekerasan Seksual</h2>
+      <img src="assets/img/kekerasan-seksual.png" alt="kekerasan-seksual" class="image">
+      <p>Setiap perbuatan merendahkan, menyerang tubuh, dan/atau fungsi reproduksi seseorang</p>
+    </div>
+    <article>
+    <div class="article" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)" onclick="handleClick('manipulatif.html')">
+      <h2>Manipulatif</h2>
+      <img src="assets/img/manipulatif.png" alt="Manipulatif" class="image">
+      <p>Pola perilaku yang menarik kepercayaan korban dengan maksud tersembunyi yang licik</p>
+    </div>
+    </article>
+    <article>
+    <div class="article" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)" onclick="handleClick('gaslighting.html')">
+      <h2>Gaslighting</h2>
+      <img src="assets/img/gaslighting.png" alt="Gaslighting" class="image">
+      <p>Pola perilaku kasar manipulatif dengan maksud mempengaruhi & mengendalikan seseorang</p>
+    </div>
+    </article>
+    <article>
+    <div class="article" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)" onclick="handleClick('darktriad.html')"> 
+    <h2>Dark Triad</h2>
+      <img src="assets/img/darktriad.png" alt="Darktriad" class="image">
+      <p>Tiga Serangkai kepribadian gelap yaitu Narsisme, Machiavellianisme, dan Psikopat.</p>
+    </div>
+    </article>
+    <article>
+    <div class="article" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)" onclick="handleClick('kbgo.html')"> 
+      <h2>Kekerasan Berbasis Gender Online (KBGO)</h2>
+      <img src="assets/img/kbgo.png" alt="KBGO" class="image">
+      <p>Bentuk kekerasan yang dilakukan kombinasi antara online dan offline yang menyerang gender</p>
+    </div>
+  </article>
+  </div>
+</div>
+</div>
+
+<aside>
+<article>
+  <div class="form-container" id="Survey Korban Kekerasan">
+    <h2>Survey Korban Kekerasan</h2>
+    <form id="survey-form" action="submit.php" method="POST">
+      <div class="form-group">
+        <label for="nama">Nama                                    :</label>
+        <input type="text" id="nama" name="nama" required>
+      </div>
+
+      <div class="form-group">
+        <label for="umur">Umur                                    :</label>
+        <input type="umur" id="umur" name="umur" required>
+      </div>
+
+      <div class="form-group">
+        <label for="jenis_kelamin">Jenis Kelamin                  :</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+          <option value="">Pilih</option>
+         <option value="perempuan">Perempuan</option>
+         <option value="laki laki">Laki-laki</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="hubungan_pelaku">Status Hubungan dengan Pelaku :</label>
+        <select id="hubungan_pelaku" name="hubungan_pelaku" required>
+          <option value="">Pilih</option>
+          <option value="Keluarga Kandung">Keluarga Kandung</option>
+          <option value="Teman Kenal">Teman Kenal</option>
+          <option value="Pernikahan/Rumah Tangga">Pernikahan/Rumah Tangga</option>
+          <option value="Rekan Kerja/Lingkungan Keja">Rekan Kerja/Lingkungan Keja</option>
+          <option value="Pacaran">Pacaran</option>
+          <option value="Orang Asing/Lingkungan Umum">Orang Asing/Lingkungan Umum</option>
+          <option value="Sekolah/Lingkungan Pendidikan">Sekolah/Lingkungan Pendidikan</option>
+          <option value="Teman Dekat">Teman Dekat</option>
+          <option value="Persahabatan">Persahabatan</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cerita">Cerita                               :</label>
+        <textarea id="cerita" name="cerita" rows="20" cols="50" required></textarea>
+      </div>
+
+      <div id="button">
+      <button type="submit">Kirim</button>
+    </div>
+    </form>
+    <div class="container" id="History Cerita Korban Kekerasan">
+    <div id="result-container">
+      <h2>History Cerita Korban Kekerasan</h2>
+      <div id="result-table-container">
+        <table id="result-table">
+          <tbody id="result-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+</aside>
+</article>
+
+
+<aside>
+  <article>
+    <div class="about">
+      <h2>About Campaigner</h2>
+      <img class="about-img" src="assets/img/campaigner.jpg" alt="campaigner">
+      <div class="about-info">
+        <h2 class="about-name">Asih Novita Sari</h2>
+        <div class="about-social">
+          <a href="https://www.facebook.com/chanovitaa" target="_blank">Facebook</a>
+          <a href="https://www.twitter.com/nverlandd" target="_blank">Twitter</a>
+          <a href="https://www.instagram.com/greendailyme" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+</aside>
+</article>
+</main>
+
+
+<footer id="page-footer">
+  <p>Violence Awerness &#169; 2023, Asih Novita Sari</p>
+</footer>
+
+<script>
+  let touchStartX = 0;
+  function handleTouchStart(event) {
+    const box = event.target;
+    box.classList.add('active');
+    touchStartX = event.changedTouches[0].clientX;
+  }
+  function handleTouchEnd(event) {
+    const touchEndX = event.changedTouches[0].clientX;
+    const touchDeltaX = touchEndX - touchStartX;
+
+    const box = event.target;
+    box.classList.remove('active');
+
+    if (Math.abs(touchDeltaX) < 10) {
+      const nextPage = box.getAttribute('data-next-page');
+      window.location.href = nextPage;
+    }
+  }
+  function handleClick(nextPage) {
+    window.location.href = nextPage;
+  }
+</script>
+
+<script>
+  document.getElementById("survey-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var nama = document.getElementById("nama").value;
+    var umur = document.getElementById("umur").value;
+    var jenis_kelamin = document.getElementById("jenis_kelamin").value;
+    var hubungan_pelaku = document.getElementById("hubungan_pelaku").value;
+    var cerita = document.getElementById("cerita").value;
+
+    // Buat objek FormData untuk mengirim data form
+    var formData = new FormData();
+    formData.append("nama", nama);
+    formData.append("umur", umur);
+    formData.append("jenis_kelamin", jenis_kelamin);
+    formData.append("hubungan_pelaku", hubungan_pelaku);
+    formData.append("cerita", cerita);
+
+    // Buat objek XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "submit.php", true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        // Update tabel dengan respons dari submit.php
+        updateTable();
+      }
+    };
+    xhr.send(formData);
+
+    document.getElementById("survey-form").reset();
+  });
+
+  // Fungsi untuk memperbarui tabel dengan data dari display.php
+  function updateTable() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "display.php", true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        // Ambil data dari respons
+        var data = xhr.responseText;
+
+        // Perbarui isi tbody dengan data baru
+        var resultBody = document.getElementById("result-body");
+        resultBody.innerHTML = data;
+      }
+    };
+    xhr.send();
+  }
+
+  // Panggil fungsi updateTable saat halaman dimuat
+  updateTable();
+</script>
+
+</body>
+
+</html>
