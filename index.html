@@ -181,59 +181,6 @@
   }
 </script>
 
-<script>
-  document.getElementById("survey-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var nama = document.getElementById("nama").value;
-    var umur = document.getElementById("umur").value;
-    var jenis_kelamin = document.getElementById("jenis_kelamin").value;
-    var hubungan_pelaku = document.getElementById("hubungan_pelaku").value;
-    var cerita = document.getElementById("cerita").value;
-
-    // Buat objek FormData untuk mengirim data form
-    var formData = new FormData();
-    formData.append("nama", nama);
-    formData.append("umur", umur);
-    formData.append("jenis_kelamin", jenis_kelamin);
-    formData.append("hubungan_pelaku", hubungan_pelaku);
-    formData.append("cerita", cerita);
-
-    // Buat objek XMLHttpRequest
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit.php", true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // Update tabel dengan respons dari submit.php
-        updateTable();
-      }
-    };
-    xhr.send(formData);
-
-    document.getElementById("survey-form").reset();
-  });
-
-  // Fungsi untuk memperbarui tabel dengan data dari display.php
-  function updateTable() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "display.php", true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // Ambil data dari respons
-        var data = xhr.responseText;
-
-        // Perbarui isi tbody dengan data baru
-        var resultBody = document.getElementById("result-body");
-        resultBody.innerHTML = data;
-      }
-    };
-    xhr.send();
-  }
-
-  // Panggil fungsi updateTable saat halaman dimuat
-  updateTable();
-</script>
-
 </body>
 
 </html>
